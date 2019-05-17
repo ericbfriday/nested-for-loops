@@ -1,0 +1,142 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "",
+  "projects": {
+    "nested-for-loops": {
+      "root": "apps/nested-for-loops/",
+      "sourceRoot": "apps/nested-for-loops/src",
+      "projectType": "application",
+      "prefix": "friday-friday",
+      "schematics": {
+        "@nrwl/schematics:component": {
+          "style": "scss"
+        }
+      },
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/apps/nested-for-loops",
+            "index": "apps/nested-for-loops/src/index.html",
+            "main": "apps/nested-for-loops/src/main.ts",
+            "polyfills": "apps/nested-for-loops/src/polyfills.ts",
+            "tsConfig": "apps/nested-for-loops/tsconfig.app.json",
+            "assets": [
+              "apps/nested-for-loops/src/favicon.ico",
+              "apps/nested-for-loops/src/assets"
+            ],
+            "styles": ["apps/nested-for-loops/src/styles.scss"],
+            "scripts": [],
+            "es5BrowserSupport": true
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/nested-for-loops/src/environments/environment.ts",
+                  "with": "apps/nested-for-loops/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "nested-for-loops:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "nested-for-loops:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "nested-for-loops:build"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "apps/nested-for-loops/tsconfig.app.json",
+              "apps/nested-for-loops/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/builders:jest",
+          "options": {
+            "jestConfig": "apps/nested-for-loops/jest.config.js",
+            "tsConfig": "apps/nested-for-loops/tsconfig.spec.json",
+            "setupFile": "apps/nested-for-loops/src/test-setup.ts"
+          }
+        }
+      }
+    },
+    "nested-for-loops-e2e": {
+      "root": "apps/nested-for-loops-e2e",
+      "projectType": "application",
+      "prefix": "",
+      "architect": {
+        "e2e": {
+          "builder": "@nrwl/builders:cypress",
+          "options": {
+            "cypressConfig": "apps/nested-for-loops-e2e/cypress.json",
+            "tsConfig": "apps/nested-for-loops-e2e/tsconfig.e2e.json",
+            "devServerTarget": "nested-for-loops:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "nested-for-loops:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": "apps/nested-for-loops-e2e/tsconfig.e2e.json",
+            "exclude": ["**/node_modules/**"]
+          }
+        }
+      }
+    }
+  },
+  "cli": {
+    "warnings": {
+      "typescriptMismatch": false,
+      "versionMismatch": false
+    },
+    "defaultCollection": "@nrwl/schematics"
+  },
+  "schematics": {
+    "@nrwl/schematics:application": {
+      "style": "scss",
+      "framework": "angular"
+    },
+    "@nrwl/schematics:library": {
+      "style": "scss"
+    }
+  },
+  "defaultProject": "nested-for-loops"
+}
