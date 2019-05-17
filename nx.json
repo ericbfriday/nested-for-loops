@@ -13,6 +13,39 @@
     },
     "nested-for-loops-e2e": {
       "tags": []
+    },
+    "weevil": {
+      "tags": []
+    },
+    "deval": {
+      "tags": []
+    },
+    "little-friends": {
+      "tags": []
+    },
+    "feature-callbacks": {
+      "tags": []
+    },
+    "feature-user-code": {
+      "tags": []
+    },
+    "feature-web-apis": {
+      "tags": []
+    },
+    "feature-editor": {
+      "tags": []
+    },
+    "feature-settings": {
+      "tags": []
+    },
+    "feature-call-stack": {
+      "tags": []
+    },
+    "feature-render-queue": {
+      "tags": []
+    },
+    "feature-html-editor": {
+      "tags": []
     }
   }
 }

@@ -14,7 +14,29 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@friday-friday/weevil": ["libs/weevil/src/index.ts"],
+      "@friday-friday/deval": ["libs/deval/src/index.ts"],
+      "@friday-friday/little-friends": ["libs/little-friends/src/index.ts"],
+      "@friday-friday/feature/callbacks": [
+        "libs/feature/callbacks/src/index.ts"
+      ],
+      "@friday-friday/feature/user-code": [
+        "libs/feature/user-code/src/index.ts"
+      ],
+      "@friday-friday/feature/web-apis": ["libs/feature/web-apis/src/index.ts"],
+      "@friday-friday/feature/editor": ["libs/feature/editor/src/index.ts"],
+      "@friday-friday/feature/settings": ["libs/feature/settings/src/index.ts"],
+      "@friday-friday/feature/call-stack": [
+        "libs/feature/call-stack/src/index.ts"
+      ],
+      "@friday-friday/feature/render-queue": [
+        "libs/feature/render-queue/src/index.ts"
+      ],
+      "@friday-friday/feature/html-editor": [
+        "libs/feature/html-editor/src/index.ts"
+      ]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
