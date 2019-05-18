@@ -46,6 +46,9 @@
     },
     "feature-html-editor": {
       "tags": []
+    },
+    "ui-kit-shared-components": {
+      "tags": []
     }
   }
 }

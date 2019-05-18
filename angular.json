@@ -464,6 +464,37 @@
           "styleext": "scss"
         }
       }
+    },
+    "ui-kit-shared-components": {
+      "root": "libs/ui-kit/shared-components",
+      "sourceRoot": "libs/ui-kit/shared-components/src",
+      "projectType": "library",
+      "prefix": "html-editor",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/ui-kit/shared-components/tsconfig.lib.json",
+              "libs/ui-kit/shared-components/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/builders:jest",
+          "options": {
+            "jestConfig": "libs/ui-kit/shared-components/jest.config.js",
+            "tsConfig": "libs/ui-kit/shared-components/tsconfig.spec.json",
+            "setupFile": "libs/ui-kit/shared-components/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/schematics:component": {
+          "styleext": "scss"
+        }
+      }
     }
   },
   "cli": {

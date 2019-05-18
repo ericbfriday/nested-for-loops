@@ -35,6 +35,9 @@
       ],
       "@friday-friday/feature/html-editor": [
         "libs/feature/html-editor/src/index.ts"
+      ],
+      "@friday-friday/ui-kit/shared-components": [
+        "libs/ui-kit/shared-components/src/index.ts"
       ]
     }
   },
