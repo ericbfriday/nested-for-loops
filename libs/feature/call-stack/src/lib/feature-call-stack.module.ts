@@ -9,6 +9,8 @@ import {
   callStackReducer,
   initialState as callStackInitialState
 } from './+state/call-stack.reducer';
+import { ItemComponent } from './item/item.component';
+import { TowerComponent } from './tower/tower.component';
 
 @NgModule({
   imports: [
@@ -18,6 +20,8 @@ import {
     }),
     EffectsModule.forFeature([CallStackEffects])
   ],
-  providers: [CallStackFacade]
+  providers: [CallStackFacade],
+  declarations: [ItemComponent, TowerComponent],
+  exports: [ItemComponent, TowerComponent]
 })
 export class FeatureCallStackModule {}

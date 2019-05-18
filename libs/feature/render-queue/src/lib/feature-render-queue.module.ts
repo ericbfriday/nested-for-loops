@@ -1,3 +1,7 @@
+/**
+ * @WhatItDoes declares components and provides limited state to the Render Queue portal.
+ */
+
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { EffectsModule } from '@ngrx/effects';
@@ -9,7 +13,12 @@ import {
   RENDERQUEUE_FEATURE_KEY,
   renderQueueReducer
 } from './+state/render-queue.reducer';
+import { QueueComponent } from './queue/queue.component';
 
+/**
+ * @WhatItDoes Entry point for the Render Queue components and state.
+ * @export FeatureRenderQueueModule
+ */
 @NgModule({
   imports: [
     CommonModule,
@@ -18,6 +27,9 @@ import {
     }),
     EffectsModule.forFeature([RenderQueueEffects])
   ],
-  providers: [RenderQueueFacade]
+  providers: [RenderQueueFacade],
+  declarations: [QueueComponent],
+  exports: [QueueComponent]
 })
+// tslint:disable-next-line: no-unnecessary-class
 export class FeatureRenderQueueModule {}

@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { BaseSpinnerComponent } from './base-spinner/base-spinner.component';
+import { EventLoopSpinnerComponent } from './event-loop-spinner/event-loop-spinner.component';
 import { FullScreenSpinnerComponent } from './full-screen-spinner/full-screen-spinner.component';
 import { SpinnerOverlayComponent } from './spinner-overlay/spinner-overlay.component';
 
@@ -13,12 +14,14 @@ import { SpinnerOverlayComponent } from './spinner-overlay/spinner-overlay.compo
   declarations: [
     BaseSpinnerComponent,
     SpinnerOverlayComponent,
-    FullScreenSpinnerComponent
+    FullScreenSpinnerComponent,
+    EventLoopSpinnerComponent
   ],
   exports: [
     BaseSpinnerComponent,
     SpinnerOverlayComponent,
-    FullScreenSpinnerComponent
+    FullScreenSpinnerComponent,
+    EventLoopSpinnerComponent
   ]
 })
 export class UiKitSharedComponentsModule {}

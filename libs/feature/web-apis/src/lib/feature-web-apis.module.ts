@@ -9,6 +9,9 @@ import {
   WEBAPIS_FEATURE_KEY,
   webApisReducer
 } from './+state/web-apis.reducer';
+import { QueryComponent } from './query/query.component';
+import { TimerComponent } from './timer/timer.component';
+import { ContainerComponent } from './container/container.component';
 
 @NgModule({
   imports: [
@@ -18,6 +21,8 @@ import {
     }),
     EffectsModule.forFeature([WebApisEffects])
   ],
-  providers: [WebApisFacade]
+  providers: [WebApisFacade],
+  declarations: [QueryComponent, TimerComponent, ContainerComponent],
+  exports: [QueryComponent, TimerComponent, ContainerComponent]
 })
 export class FeatureWebApisModule {}

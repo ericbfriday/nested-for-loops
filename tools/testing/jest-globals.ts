@@ -1,3 +1,4 @@
+// tslint:disable promise-function-async typedef
 import { TestBed } from '@angular/core/testing';
 
 type CompilerOptions = Partial<{

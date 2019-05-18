@@ -6,6 +6,28 @@
     "node_modules/tslint-microsoft-contrib"
   ],
   "rules": {
+    "array-bracket-spacing": false,
+    "completed-docs": [
+      true,
+      {
+        "classe": true,
+        "enums": true,
+        "enum-members": false,
+        "functions": { "visibilities": ["exported"] },
+        "interfaces": { "visibilities": ["exported"] },
+        "methods": {
+          "locations": "instance",
+          "privacies": ["public", "protected"]
+        },
+        "properties": {
+          "locations": "all",
+          "existence": ["inheritdoc"]
+        },
+        "namespaces": true,
+        "types": true,
+        "variables": false
+      }
+    ],
     "export-name": false,
     "file-header": true,
     "informative-docs": [true, { "useless-words": ["a", "an", "the", "text"] }],
@@ -13,7 +35,9 @@
     "linebreak-style": false,
     "match-default-export-name": false,
     "missing-jsdoc": false,
+    "no-implicit-dependencies": false,
     "no-relative-imports": false,
+    "no-single-line-block-comments": false,
     "no-submodule-imports": false,
 
     "nx-enforce-module-boundaries": [

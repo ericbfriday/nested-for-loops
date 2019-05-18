@@ -1,7 +1,7 @@
 /**
  * Initial Jest config importing core/ts-jest and creating basic mocks.
  */
-// tslint:disable typedef no-single-line-block-comment no-import-side-effect
+// tslint:disable typedef no-single-line-block-comment no-import-side-effect promise-function-async
 import 'core-js';
 import 'ts-jest';
 

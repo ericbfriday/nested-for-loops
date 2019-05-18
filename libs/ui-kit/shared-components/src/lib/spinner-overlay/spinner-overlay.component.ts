@@ -40,5 +40,5 @@ import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 export class SpinnerOverlayComponent implements OnInit {
   constructor() {}
 
-  public ngOnInit() {}
+  public ngOnInit(): void {}
 }

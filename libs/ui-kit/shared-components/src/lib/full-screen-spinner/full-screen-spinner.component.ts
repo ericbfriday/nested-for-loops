@@ -38,5 +38,5 @@ export class FullScreenSpinnerComponent implements OnInit {
   @Input() public message: string;
   constructor() {}
 
-  public ngOnInit() {}
+  public ngOnInit(): void {}
 }

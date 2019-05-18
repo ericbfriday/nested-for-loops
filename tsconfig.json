@@ -25,7 +25,6 @@
         "libs/feature/user-code/src/index.ts"
       ],
       "@friday-friday/feature/web-apis": ["libs/feature/web-apis/src/index.ts"],
-      "@friday-friday/feature/editor": ["libs/feature/editor/src/index.ts"],
       "@friday-friday/feature/settings": ["libs/feature/settings/src/index.ts"],
       "@friday-friday/feature/call-stack": [
         "libs/feature/call-stack/src/index.ts"
@@ -38,7 +37,11 @@
       ],
       "@friday-friday/ui-kit/shared-components": [
         "libs/ui-kit/shared-components/src/index.ts"
-      ]
+      ],
+      "@friday-friday/feature/jsts-editor": [
+        "libs/feature/jsts-editor/src/index.ts"
+      ],
+      "@friday-friday/utils/common": ["libs/utils/common/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

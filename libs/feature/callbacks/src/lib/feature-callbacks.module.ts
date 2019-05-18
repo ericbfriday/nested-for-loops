@@ -9,6 +9,8 @@ import {
   callbacksReducer,
   initialState as callbacksInitialState
 } from './+state/callbacks.reducer';
+import { CbItemComponent } from './cb-item/cb-item.component';
+import { CbQueueComponent } from './cb-queue/cb-queue.component';
 
 @NgModule({
   imports: [
@@ -18,6 +20,8 @@ import {
     }),
     EffectsModule.forFeature([CallbacksEffects])
   ],
-  providers: [CallbacksFacade]
+  providers: [CallbacksFacade],
+  declarations: [CbItemComponent, CbQueueComponent],
+  exports: [CbItemComponent, CbQueueComponent]
 })
 export class FeatureCallbacksModule {}

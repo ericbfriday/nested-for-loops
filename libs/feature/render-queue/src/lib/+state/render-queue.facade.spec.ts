@@ -1,3 +1,4 @@
+// tslint:disable
 import { NgModule } from '@angular/core';
 import { TestBed } from '@angular/core/testing';
 import { readFirst } from '@nrwl/nx/testing';

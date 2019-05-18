@@ -1,3 +1,4 @@
+// tslint:disable
 import { RenderQueueLoaded } from './render-queue.actions';
 import {
   Entity,

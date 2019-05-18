@@ -9,6 +9,7 @@ import {
   SETTINGS_FEATURE_KEY,
   settingsReducer
 } from './+state/settings.reducer';
+import { PanelComponent } from './panel/panel.component';
 
 @NgModule({
   imports: [
@@ -18,6 +19,8 @@ import {
     }),
     EffectsModule.forFeature([SettingsEffects])
   ],
-  providers: [SettingsFacade]
+  providers: [SettingsFacade],
+  declarations: [PanelComponent],
+  exports: [PanelComponent]
 })
 export class FeatureSettingsModule {}

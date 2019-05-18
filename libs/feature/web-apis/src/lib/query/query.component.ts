@@ -1,0 +1,19 @@
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'web-api-query',
+  template: `
+    <p>
+      query works!
+    </p>
+  `,
+  styles: []
+})
+export class QueryComponent implements OnInit {
+
+  constructor() { }
+
+  ngOnInit() {
+  }
+
+}

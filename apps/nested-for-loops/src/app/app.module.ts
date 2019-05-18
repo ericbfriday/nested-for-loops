@@ -1,8 +1,12 @@
+/**
+ * Main entry point to the final application.
+ */
 import { NgModule } from '@angular/core';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ServiceWorkerModule } from '@angular/service-worker';
+import { FeatureJstsEditorModule } from '@friday-friday/feature/jsts-editor';
 import { UiKitSharedComponentsModule } from '@friday-friday/ui-kit/shared-components';
 import { EffectsModule } from '@ngrx/effects';
 import { StoreModule } from '@ngrx/store';
@@ -24,10 +28,11 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    UiKitSharedComponentsModule,
+    // PWA
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production
     }),
+    // NGRX
     NxModule.forRoot(),
     StoreModule.forRoot(
       { nestedForLoopsRoot: nestedForLoopsRootReducer },
@@ -38,18 +43,15 @@ import { AppComponent } from './app.component';
     ),
     EffectsModule.forRoot([NestedForLoopsRootEffects]),
     !environment.production ? StoreDevtoolsModule.instrument() : [],
+    // Custom Modules
+    UiKitSharedComponentsModule,
+    FeatureJstsEditorModule,
     // Material Imports
     MatToolbarModule
   ],
   providers: [NestedForLoopsRootFacade],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
-
-/**
- *     StoreModule.provideStore(rootReducer),
-    // Note that you must instrument after importing StoreModule
-    StoreDevtoolsModule.instrumentOnlyWithExtension({
-      maxAge: 5
-    })
- */
+export class AppModule {
+  private title: string = 'hello';
+}

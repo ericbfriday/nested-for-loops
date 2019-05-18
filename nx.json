@@ -32,9 +32,6 @@
     "feature-web-apis": {
       "tags": []
     },
-    "feature-editor": {
-      "tags": []
-    },
     "feature-settings": {
       "tags": []
     },
@@ -48,6 +45,12 @@
       "tags": []
     },
     "ui-kit-shared-components": {
+      "tags": []
+    },
+    "feature-jsts-editor": {
+      "tags": []
+    },
+    "utils-common": {
       "tags": []
     }
   }
