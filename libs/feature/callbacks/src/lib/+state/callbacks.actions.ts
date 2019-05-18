@@ -8,16 +8,16 @@ export enum CallbacksActionTypes {
 }
 
 export class LoadCallbacks implements Action {
-  readonly type = CallbacksActionTypes.LoadCallbacks;
+  public readonly type = CallbacksActionTypes.LoadCallbacks;
 }
 
 export class CallbacksLoadError implements Action {
-  readonly type = CallbacksActionTypes.CallbacksLoadError;
+  public readonly type = CallbacksActionTypes.CallbacksLoadError;
   constructor(public payload: any) {}
 }
 
 export class CallbacksLoaded implements Action {
-  readonly type = CallbacksActionTypes.CallbacksLoaded;
+  public readonly type = CallbacksActionTypes.CallbacksLoaded;
   constructor(public payload: Entity[]) {}
 }
 

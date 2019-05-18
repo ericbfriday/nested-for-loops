@@ -1,14 +1,14 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { StoreModule } from '@ngrx/store';
+import { NgModule } from '@angular/core';
 import { EffectsModule } from '@ngrx/effects';
-import {
-  USERCODE_FEATURE_KEY,
-  initialState as userCodeInitialState,
-  userCodeReducer
-} from './+state/user-code.reducer';
+import { StoreModule } from '@ngrx/store';
 import { UserCodeEffects } from './+state/user-code.effects';
 import { UserCodeFacade } from './+state/user-code.facade';
+import {
+  initialState as userCodeInitialState,
+  USERCODE_FEATURE_KEY,
+  userCodeReducer
+} from './+state/user-code.reducer';
 
 @NgModule({
   imports: [

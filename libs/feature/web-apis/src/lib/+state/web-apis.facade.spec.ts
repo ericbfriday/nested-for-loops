@@ -3,21 +3,21 @@ import { TestBed } from '@angular/core/testing';
 import { readFirst } from '@nrwl/nx/testing';
 
 import { EffectsModule } from '@ngrx/effects';
-import { StoreModule, Store } from '@ngrx/store';
+import { Store, StoreModule } from '@ngrx/store';
 
 import { NxModule } from '@nrwl/nx';
 
 import { WebApisEffects } from './web-apis.effects';
 import { WebApisFacade } from './web-apis.facade';
 
-import { webApisQuery } from './web-apis.selectors';
 import { LoadWebApis, WebApisLoaded } from './web-apis.actions';
 import {
-  WebApisState,
   Entity,
   initialState,
-  webApisReducer
+  webApisReducer,
+  WebApisState
 } from './web-apis.reducer';
+import { webApisQuery } from './web-apis.selectors';
 
 interface TestSchema {
   webApis: WebApisState;

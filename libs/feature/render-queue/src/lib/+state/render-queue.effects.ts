@@ -1,18 +1,18 @@
 import { Injectable } from '@angular/core';
-import { Effect, Actions } from '@ngrx/effects';
+import { Actions, Effect } from '@ngrx/effects';
 import { DataPersistence } from '@nrwl/nx';
 
-import { RenderQueuePartialState } from './render-queue.reducer';
 import {
   LoadRenderQueue,
+  RenderQueueActionTypes,
   RenderQueueLoaded,
-  RenderQueueLoadError,
-  RenderQueueActionTypes
+  RenderQueueLoadError
 } from './render-queue.actions';
+import { RenderQueuePartialState } from './render-queue.reducer';
 
 @Injectable()
 export class RenderQueueEffects {
-  @Effect() loadRenderQueue$ = this.dataPersistence.fetch(
+  @Effect() public loadRenderQueue$ = this.dataPersistence.fetch(
     RenderQueueActionTypes.LoadRenderQueue,
     {
       run: (action: LoadRenderQueue, state: RenderQueuePartialState) => {

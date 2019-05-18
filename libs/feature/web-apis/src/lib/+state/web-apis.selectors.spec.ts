@@ -3,7 +3,7 @@ import { webApisQuery } from './web-apis.selectors';
 
 describe('WebApis Selectors', () => {
   const ERROR_MSG = 'No Error Available';
-  const getWebApisId = it => it['id'];
+  const getWebApisId = it => it.id;
 
   let storeState;
 
@@ -42,13 +42,13 @@ describe('WebApis Selectors', () => {
       expect(selId).toBe('PRODUCT-BBB');
     });
 
-    it("getLoaded() should return the current 'loaded' status", () => {
+    it('getLoaded() should return the current \'loaded\' status', () => {
       const result = webApisQuery.getLoaded(storeState);
 
       expect(result).toBe(true);
     });
 
-    it("getError() should return the current 'error' storeState", () => {
+    it('getError() should return the current \'error\' storeState', () => {
       const result = webApisQuery.getError(storeState);
 
       expect(result).toBe(ERROR_MSG);

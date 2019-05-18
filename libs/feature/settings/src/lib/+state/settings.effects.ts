@@ -1,18 +1,18 @@
 import { Injectable } from '@angular/core';
-import { Effect, Actions } from '@ngrx/effects';
+import { Actions, Effect } from '@ngrx/effects';
 import { DataPersistence } from '@nrwl/nx';
 
-import { SettingsPartialState } from './settings.reducer';
 import {
   LoadSettings,
+  SettingsActionTypes,
   SettingsLoaded,
-  SettingsLoadError,
-  SettingsActionTypes
+  SettingsLoadError
 } from './settings.actions';
+import { SettingsPartialState } from './settings.reducer';
 
 @Injectable()
 export class SettingsEffects {
-  @Effect() loadSettings$ = this.dataPersistence.fetch(
+  @Effect() public loadSettings$ = this.dataPersistence.fetch(
     SettingsActionTypes.LoadSettings,
     {
       run: (action: LoadSettings, state: SettingsPartialState) => {

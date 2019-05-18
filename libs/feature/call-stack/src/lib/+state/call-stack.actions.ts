@@ -8,16 +8,16 @@ export enum CallStackActionTypes {
 }
 
 export class LoadCallStack implements Action {
-  readonly type = CallStackActionTypes.LoadCallStack;
+  public readonly type = CallStackActionTypes.LoadCallStack;
 }
 
 export class CallStackLoadError implements Action {
-  readonly type = CallStackActionTypes.CallStackLoadError;
+  public readonly type = CallStackActionTypes.CallStackLoadError;
   constructor(public payload: any) {}
 }
 
 export class CallStackLoaded implements Action {
-  readonly type = CallStackActionTypes.CallStackLoaded;
+  public readonly type = CallStackActionTypes.CallStackLoaded;
   constructor(public payload: Entity[]) {}
 }
 

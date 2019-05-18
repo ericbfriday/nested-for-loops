@@ -3,21 +3,21 @@ import { TestBed } from '@angular/core/testing';
 import { readFirst } from '@nrwl/nx/testing';
 
 import { EffectsModule } from '@ngrx/effects';
-import { StoreModule, Store } from '@ngrx/store';
+import { Store, StoreModule } from '@ngrx/store';
 
 import { NxModule } from '@nrwl/nx';
 
 import { SettingsEffects } from './settings.effects';
 import { SettingsFacade } from './settings.facade';
 
-import { settingsQuery } from './settings.selectors';
 import { LoadSettings, SettingsLoaded } from './settings.actions';
 import {
-  SettingsState,
   Entity,
   initialState,
-  settingsReducer
+  settingsReducer,
+  SettingsState
 } from './settings.reducer';
+import { settingsQuery } from './settings.selectors';
 
 interface TestSchema {
   settings: SettingsState;

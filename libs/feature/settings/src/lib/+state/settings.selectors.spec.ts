@@ -3,7 +3,7 @@ import { settingsQuery } from './settings.selectors';
 
 describe('Settings Selectors', () => {
   const ERROR_MSG = 'No Error Available';
-  const getSettingsId = it => it['id'];
+  const getSettingsId = it => it.id;
 
   let storeState;
 
@@ -42,13 +42,13 @@ describe('Settings Selectors', () => {
       expect(selId).toBe('PRODUCT-BBB');
     });
 
-    it("getLoaded() should return the current 'loaded' status", () => {
+    it('getLoaded() should return the current \'loaded\' status', () => {
       const result = settingsQuery.getLoaded(storeState);
 
       expect(result).toBe(true);
     });
 
-    it("getError() should return the current 'error' storeState", () => {
+    it('getError() should return the current \'error\' storeState', () => {
       const result = settingsQuery.getError(storeState);
 
       expect(result).toBe(ERROR_MSG);

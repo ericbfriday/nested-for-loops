@@ -1,14 +1,14 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { StoreModule } from '@ngrx/store';
+import { NgModule } from '@angular/core';
 import { EffectsModule } from '@ngrx/effects';
-import {
-  RENDERQUEUE_FEATURE_KEY,
-  initialState as renderQueueInitialState,
-  renderQueueReducer
-} from './+state/render-queue.reducer';
+import { StoreModule } from '@ngrx/store';
 import { RenderQueueEffects } from './+state/render-queue.effects';
 import { RenderQueueFacade } from './+state/render-queue.facade';
+import {
+  initialState as renderQueueInitialState,
+  RENDERQUEUE_FEATURE_KEY,
+  renderQueueReducer
+} from './+state/render-queue.reducer';
 
 @NgModule({
   imports: [

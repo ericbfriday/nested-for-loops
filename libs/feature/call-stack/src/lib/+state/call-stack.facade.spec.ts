@@ -3,21 +3,21 @@ import { TestBed } from '@angular/core/testing';
 import { readFirst } from '@nrwl/nx/testing';
 
 import { EffectsModule } from '@ngrx/effects';
-import { StoreModule, Store } from '@ngrx/store';
+import { Store, StoreModule } from '@ngrx/store';
 
 import { NxModule } from '@nrwl/nx';
 
 import { CallStackEffects } from './call-stack.effects';
 import { CallStackFacade } from './call-stack.facade';
 
-import { callStackQuery } from './call-stack.selectors';
-import { LoadCallStack, CallStackLoaded } from './call-stack.actions';
+import { CallStackLoaded, LoadCallStack } from './call-stack.actions';
 import {
+  callStackReducer,
   CallStackState,
   Entity,
-  initialState,
-  callStackReducer
+  initialState
 } from './call-stack.reducer';
+import { callStackQuery } from './call-stack.selectors';
 
 interface TestSchema {
   callStack: CallStackState;

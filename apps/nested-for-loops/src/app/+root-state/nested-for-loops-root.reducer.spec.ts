@@ -1,13 +1,13 @@
 import { NestedForLoopsRootLoaded } from './nested-for-loops-root.actions';
 import {
-  NestedForLoopsRootState,
   Entity,
   initialState,
-  nestedForLoopsRootReducer
+  nestedForLoopsRootReducer,
+  NestedForLoopsRootState
 } from './nested-for-loops-root.reducer';
 
 describe('NestedForLoopsRoot Reducer', () => {
-  const getNestedForLoopsRootId = it => it['id'];
+  const getNestedForLoopsRootId = it => it.id;
   let createNestedForLoopsRoot;
 
   beforeEach(() => {

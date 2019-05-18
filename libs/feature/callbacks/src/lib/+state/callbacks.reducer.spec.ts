@@ -1,13 +1,13 @@
 import { CallbacksLoaded } from './callbacks.actions';
 import {
+  callbacksReducer,
   CallbacksState,
   Entity,
-  initialState,
-  callbacksReducer
+  initialState
 } from './callbacks.reducer';
 
 describe('Callbacks Reducer', () => {
-  const getCallbacksId = it => it['id'];
+  const getCallbacksId = it => it.id;
   let createCallbacks;
 
   beforeEach(() => {

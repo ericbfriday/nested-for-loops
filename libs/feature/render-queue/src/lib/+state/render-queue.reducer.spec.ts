@@ -1,13 +1,13 @@
 import { RenderQueueLoaded } from './render-queue.actions';
 import {
-  RenderQueueState,
   Entity,
   initialState,
-  renderQueueReducer
+  renderQueueReducer,
+  RenderQueueState
 } from './render-queue.reducer';
 
 describe('RenderQueue Reducer', () => {
-  const getRenderQueueId = it => it['id'];
+  const getRenderQueueId = it => it.id;
   let createRenderQueue;
 
   beforeEach(() => {

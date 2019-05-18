@@ -40,7 +40,6 @@ export function callStackReducer(
         list: action.payload,
         loaded: true
       };
-      break;
     }
   }
   return state;

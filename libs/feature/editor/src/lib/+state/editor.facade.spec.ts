@@ -3,21 +3,21 @@ import { TestBed } from '@angular/core/testing';
 import { readFirst } from '@nrwl/nx/testing';
 
 import { EffectsModule } from '@ngrx/effects';
-import { StoreModule, Store } from '@ngrx/store';
+import { Store, StoreModule } from '@ngrx/store';
 
 import { NxModule } from '@nrwl/nx';
 
 import { EditorEffects } from './editor.effects';
 import { EditorFacade } from './editor.facade';
 
-import { editorQuery } from './editor.selectors';
-import { LoadEditor, EditorLoaded } from './editor.actions';
+import { EditorLoaded, LoadEditor } from './editor.actions';
 import {
+  editorReducer,
   EditorState,
   Entity,
-  initialState,
-  editorReducer
+  initialState
 } from './editor.reducer';
+import { editorQuery } from './editor.selectors';
 
 interface TestSchema {
   editor: EditorState;

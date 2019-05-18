@@ -3,21 +3,21 @@ import { TestBed } from '@angular/core/testing';
 import { readFirst } from '@nrwl/nx/testing';
 
 import { EffectsModule } from '@ngrx/effects';
-import { StoreModule, Store } from '@ngrx/store';
+import { Store, StoreModule } from '@ngrx/store';
 
 import { NxModule } from '@nrwl/nx';
 
 import { CallbacksEffects } from './callbacks.effects';
 import { CallbacksFacade } from './callbacks.facade';
 
-import { callbacksQuery } from './callbacks.selectors';
-import { LoadCallbacks, CallbacksLoaded } from './callbacks.actions';
+import { CallbacksLoaded, LoadCallbacks } from './callbacks.actions';
 import {
+  callbacksReducer,
   CallbacksState,
   Entity,
-  initialState,
-  callbacksReducer
+  initialState
 } from './callbacks.reducer';
+import { callbacksQuery } from './callbacks.selectors';
 
 interface TestSchema {
   callbacks: CallbacksState;

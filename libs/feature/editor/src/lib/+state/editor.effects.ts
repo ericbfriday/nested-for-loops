@@ -1,18 +1,18 @@
 import { Injectable } from '@angular/core';
-import { Effect, Actions } from '@ngrx/effects';
+import { Actions, Effect } from '@ngrx/effects';
 import { DataPersistence } from '@nrwl/nx';
 
-import { EditorPartialState } from './editor.reducer';
 import {
-  LoadEditor,
+  EditorActionTypes,
   EditorLoaded,
   EditorLoadError,
-  EditorActionTypes
+  LoadEditor
 } from './editor.actions';
+import { EditorPartialState } from './editor.reducer';
 
 @Injectable()
 export class EditorEffects {
-  @Effect() loadEditor$ = this.dataPersistence.fetch(
+  @Effect() public loadEditor$ = this.dataPersistence.fetch(
     EditorActionTypes.LoadEditor,
     {
       run: (action: LoadEditor, state: EditorPartialState) => {

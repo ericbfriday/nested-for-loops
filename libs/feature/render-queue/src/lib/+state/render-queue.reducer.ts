@@ -43,7 +43,6 @@ export function renderQueueReducer(
         list: action.payload,
         loaded: true
       };
-      break;
     }
   }
   return state;

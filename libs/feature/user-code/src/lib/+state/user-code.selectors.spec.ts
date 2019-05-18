@@ -3,7 +3,7 @@ import { userCodeQuery } from './user-code.selectors';
 
 describe('UserCode Selectors', () => {
   const ERROR_MSG = 'No Error Available';
-  const getUserCodeId = it => it['id'];
+  const getUserCodeId = it => it.id;
 
   let storeState;
 
@@ -42,13 +42,13 @@ describe('UserCode Selectors', () => {
       expect(selId).toBe('PRODUCT-BBB');
     });
 
-    it("getLoaded() should return the current 'loaded' status", () => {
+    it('getLoaded() should return the current \'loaded\' status', () => {
       const result = userCodeQuery.getLoaded(storeState);
 
       expect(result).toBe(true);
     });
 
-    it("getError() should return the current 'error' storeState", () => {
+    it('getError() should return the current \'error\' storeState', () => {
       const result = userCodeQuery.getError(storeState);
 
       expect(result).toBe(ERROR_MSG);

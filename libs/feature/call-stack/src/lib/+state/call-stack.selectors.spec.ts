@@ -1,9 +1,9 @@
-import { Entity, CallStackState } from './call-stack.reducer';
+import { CallStackState, Entity } from './call-stack.reducer';
 import { callStackQuery } from './call-stack.selectors';
 
 describe('CallStack Selectors', () => {
   const ERROR_MSG = 'No Error Available';
-  const getCallStackId = it => it['id'];
+  const getCallStackId = it => it.id;
 
   let storeState;
 
@@ -42,13 +42,13 @@ describe('CallStack Selectors', () => {
       expect(selId).toBe('PRODUCT-BBB');
     });
 
-    it("getLoaded() should return the current 'loaded' status", () => {
+    it('getLoaded() should return the current \'loaded\' status', () => {
       const result = callStackQuery.getLoaded(storeState);
 
       expect(result).toBe(true);
     });
 
-    it("getError() should return the current 'error' storeState", () => {
+    it('getError() should return the current \'error\' storeState', () => {
       const result = callStackQuery.getError(storeState);
 
       expect(result).toBe(ERROR_MSG);

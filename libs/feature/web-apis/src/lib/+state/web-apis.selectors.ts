@@ -30,8 +30,8 @@ const getSelectedWebApis = createSelector(
   getAllWebApis,
   getSelectedId,
   (webApis, id) => {
-    const result = webApis.find(it => it['id'] === id);
-    return result ? Object.assign({}, result) : undefined;
+    const result = webApis.find(it => it.id === id);
+    return result ? {...result} : undefined;
   }
 );
 

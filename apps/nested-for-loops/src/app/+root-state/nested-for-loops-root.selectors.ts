@@ -33,8 +33,8 @@ const getSelectedNestedForLoopsRoot = createSelector(
   getAllNestedForLoopsRoot,
   getSelectedId,
   (nestedForLoopsRoot, id) => {
-    const result = nestedForLoopsRoot.find(it => it['id'] === id);
-    return result ? Object.assign({}, result) : undefined;
+    const result = nestedForLoopsRoot.find(it => it.id === id);
+    return result ? {...result} : undefined;
   }
 );
 

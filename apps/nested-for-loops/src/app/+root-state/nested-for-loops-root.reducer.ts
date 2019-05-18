@@ -43,7 +43,6 @@ export function nestedForLoopsRootReducer(
         list: action.payload,
         loaded: true
       };
-      break;
     }
   }
   return state;

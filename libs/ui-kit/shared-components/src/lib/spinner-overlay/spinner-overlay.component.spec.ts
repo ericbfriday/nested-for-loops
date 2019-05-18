@@ -1,3 +1,4 @@
+// tslint:disable typedef no-single-line-block-comment no-import-side-effect no-floating-promises
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { SpinnerOverlayComponent } from './spinner-overlay.component';
@@ -8,9 +9,8 @@ describe('SpinnerOverlayComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SpinnerOverlayComponent ]
-    })
-    .compileComponents();
+      declarations: [SpinnerOverlayComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {

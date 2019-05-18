@@ -1,14 +1,14 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { StoreModule } from '@ngrx/store';
+import { NgModule } from '@angular/core';
 import { EffectsModule } from '@ngrx/effects';
-import {
-  CALLBACKS_FEATURE_KEY,
-  initialState as callbacksInitialState,
-  callbacksReducer
-} from './+state/callbacks.reducer';
+import { StoreModule } from '@ngrx/store';
 import { CallbacksEffects } from './+state/callbacks.effects';
 import { CallbacksFacade } from './+state/callbacks.facade';
+import {
+  CALLBACKS_FEATURE_KEY,
+  callbacksReducer,
+  initialState as callbacksInitialState
+} from './+state/callbacks.reducer';
 
 @NgModule({
   imports: [

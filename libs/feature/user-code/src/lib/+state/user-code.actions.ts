@@ -8,16 +8,16 @@ export enum UserCodeActionTypes {
 }
 
 export class LoadUserCode implements Action {
-  readonly type = UserCodeActionTypes.LoadUserCode;
+  public readonly type = UserCodeActionTypes.LoadUserCode;
 }
 
 export class UserCodeLoadError implements Action {
-  readonly type = UserCodeActionTypes.UserCodeLoadError;
+  public readonly type = UserCodeActionTypes.UserCodeLoadError;
   constructor(public payload: any) {}
 }
 
 export class UserCodeLoaded implements Action {
-  readonly type = UserCodeActionTypes.UserCodeLoaded;
+  public readonly type = UserCodeActionTypes.UserCodeLoaded;
   constructor(public payload: Entity[]) {}
 }
 

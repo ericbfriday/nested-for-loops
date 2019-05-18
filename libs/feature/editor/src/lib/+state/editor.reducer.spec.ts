@@ -1,13 +1,13 @@
 import { EditorLoaded } from './editor.actions';
 import {
+  editorReducer,
   EditorState,
   Entity,
-  initialState,
-  editorReducer
+  initialState
 } from './editor.reducer';
 
 describe('Editor Reducer', () => {
-  const getEditorId = it => it['id'];
+  const getEditorId = it => it.id;
   let createEditor;
 
   beforeEach(() => {

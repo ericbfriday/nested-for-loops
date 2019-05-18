@@ -8,16 +8,16 @@ export enum NestedForLoopsRootActionTypes {
 }
 
 export class LoadNestedForLoopsRoot implements Action {
-  readonly type = NestedForLoopsRootActionTypes.LoadNestedForLoopsRoot;
+  public readonly type = NestedForLoopsRootActionTypes.LoadNestedForLoopsRoot;
 }
 
 export class NestedForLoopsRootLoadError implements Action {
-  readonly type = NestedForLoopsRootActionTypes.NestedForLoopsRootLoadError;
+  public readonly type = NestedForLoopsRootActionTypes.NestedForLoopsRootLoadError;
   constructor(public payload: any) {}
 }
 
 export class NestedForLoopsRootLoaded implements Action {
-  readonly type = NestedForLoopsRootActionTypes.NestedForLoopsRootLoaded;
+  public readonly type = NestedForLoopsRootActionTypes.NestedForLoopsRootLoaded;
   constructor(public payload: Entity[]) {}
 }
 

@@ -8,16 +8,16 @@ export enum SettingsActionTypes {
 }
 
 export class LoadSettings implements Action {
-  readonly type = SettingsActionTypes.LoadSettings;
+  public readonly type = SettingsActionTypes.LoadSettings;
 }
 
 export class SettingsLoadError implements Action {
-  readonly type = SettingsActionTypes.SettingsLoadError;
+  public readonly type = SettingsActionTypes.SettingsLoadError;
   constructor(public payload: any) {}
 }
 
 export class SettingsLoaded implements Action {
-  readonly type = SettingsActionTypes.SettingsLoaded;
+  public readonly type = SettingsActionTypes.SettingsLoaded;
   constructor(public payload: Entity[]) {}
 }
 

@@ -8,16 +8,16 @@ export enum WebApisActionTypes {
 }
 
 export class LoadWebApis implements Action {
-  readonly type = WebApisActionTypes.LoadWebApis;
+  public readonly type = WebApisActionTypes.LoadWebApis;
 }
 
 export class WebApisLoadError implements Action {
-  readonly type = WebApisActionTypes.WebApisLoadError;
+  public readonly type = WebApisActionTypes.WebApisLoadError;
   constructor(public payload: any) {}
 }
 
 export class WebApisLoaded implements Action {
-  readonly type = WebApisActionTypes.WebApisLoaded;
+  public readonly type = WebApisActionTypes.WebApisLoaded;
   constructor(public payload: Entity[]) {}
 }
 

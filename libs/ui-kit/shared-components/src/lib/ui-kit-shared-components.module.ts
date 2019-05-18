@@ -1,8 +1,8 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
 import { BaseSpinnerComponent } from './base-spinner/base-spinner.component';
-import { SpinnerOverlayComponent } from './spinner-overlay/spinner-overlay.component';
 import { FullScreenSpinnerComponent } from './full-screen-spinner/full-screen-spinner.component';
+import { SpinnerOverlayComponent } from './spinner-overlay/spinner-overlay.component';
 
 /**
  * https://christianlydemann.com/four-ways-to-create-loading-spinners-in-an-angular-app/

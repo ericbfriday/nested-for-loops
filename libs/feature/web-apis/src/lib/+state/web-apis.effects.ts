@@ -1,18 +1,18 @@
 import { Injectable } from '@angular/core';
-import { Effect, Actions } from '@ngrx/effects';
+import { Actions, Effect } from '@ngrx/effects';
 import { DataPersistence } from '@nrwl/nx';
 
-import { WebApisPartialState } from './web-apis.reducer';
 import {
   LoadWebApis,
+  WebApisActionTypes,
   WebApisLoaded,
-  WebApisLoadError,
-  WebApisActionTypes
+  WebApisLoadError
 } from './web-apis.actions';
+import { WebApisPartialState } from './web-apis.reducer';
 
 @Injectable()
 export class WebApisEffects {
-  @Effect() loadWebApis$ = this.dataPersistence.fetch(
+  @Effect() public loadWebApis$ = this.dataPersistence.fetch(
     WebApisActionTypes.LoadWebApis,
     {
       run: (action: LoadWebApis, state: WebApisPartialState) => {

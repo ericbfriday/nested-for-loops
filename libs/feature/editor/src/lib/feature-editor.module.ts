@@ -1,14 +1,14 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { StoreModule } from '@ngrx/store';
+import { NgModule } from '@angular/core';
 import { EffectsModule } from '@ngrx/effects';
-import {
-  EDITOR_FEATURE_KEY,
-  initialState as editorInitialState,
-  editorReducer
-} from './+state/editor.reducer';
+import { StoreModule } from '@ngrx/store';
 import { EditorEffects } from './+state/editor.effects';
 import { EditorFacade } from './+state/editor.facade';
+import {
+  EDITOR_FEATURE_KEY,
+  editorReducer,
+  initialState as editorInitialState
+} from './+state/editor.reducer';
 
 @NgModule({
   imports: [

@@ -28,8 +28,8 @@ const getSelectedEditor = createSelector(
   getAllEditor,
   getSelectedId,
   (editor, id) => {
-    const result = editor.find(it => it['id'] === id);
-    return result ? Object.assign({}, result) : undefined;
+    const result = editor.find(it => it.id === id);
+    return result ? {...result} : undefined;
   }
 );
 

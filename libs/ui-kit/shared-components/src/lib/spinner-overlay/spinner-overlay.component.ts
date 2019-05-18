@@ -1,4 +1,4 @@
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'ui-kit-spinner-overlay',
@@ -40,5 +40,5 @@ import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 export class SpinnerOverlayComponent implements OnInit {
   constructor() {}
 
-  ngOnInit() {}
+  public ngOnInit() {}
 }

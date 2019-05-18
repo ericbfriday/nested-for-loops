@@ -6,7 +6,7 @@ import { nestedForLoopsRootQuery } from './nested-for-loops-root.selectors';
 
 describe('NestedForLoopsRoot Selectors', () => {
   const ERROR_MSG = 'No Error Available';
-  const getNestedForLoopsRootId = it => it['id'];
+  const getNestedForLoopsRootId = it => it.id;
 
   let storeState;
 
@@ -49,13 +49,13 @@ describe('NestedForLoopsRoot Selectors', () => {
       expect(selId).toBe('PRODUCT-BBB');
     });
 
-    it("getLoaded() should return the current 'loaded' status", () => {
+    it('getLoaded() should return the current \'loaded\' status', () => {
       const result = nestedForLoopsRootQuery.getLoaded(storeState);
 
       expect(result).toBe(true);
     });
 
-    it("getError() should return the current 'error' storeState", () => {
+    it('getError() should return the current \'error\' storeState', () => {
       const result = nestedForLoopsRootQuery.getError(storeState);
 
       expect(result).toBe(ERROR_MSG);

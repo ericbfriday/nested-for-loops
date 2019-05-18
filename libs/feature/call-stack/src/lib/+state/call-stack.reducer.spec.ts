@@ -1,13 +1,13 @@
 import { CallStackLoaded } from './call-stack.actions';
 import {
+  callStackReducer,
   CallStackState,
   Entity,
-  initialState,
-  callStackReducer
+  initialState
 } from './call-stack.reducer';
 
 describe('CallStack Reducer', () => {
-  const getCallStackId = it => it['id'];
+  const getCallStackId = it => it.id;
   let createCallStack;
 
   beforeEach(() => {

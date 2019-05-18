@@ -40,7 +40,6 @@ export function userCodeReducer(
         list: action.payload,
         loaded: true
       };
-      break;
     }
   }
   return state;

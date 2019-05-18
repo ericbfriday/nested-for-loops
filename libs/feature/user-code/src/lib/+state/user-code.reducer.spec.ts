@@ -1,13 +1,13 @@
 import { UserCodeLoaded } from './user-code.actions';
 import {
-  UserCodeState,
   Entity,
   initialState,
-  userCodeReducer
+  userCodeReducer,
+  UserCodeState
 } from './user-code.reducer';
 
 describe('UserCode Reducer', () => {
-  const getUserCodeId = it => it['id'];
+  const getUserCodeId = it => it.id;
   let createUserCode;
 
   beforeEach(() => {

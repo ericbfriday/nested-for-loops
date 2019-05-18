@@ -8,16 +8,16 @@ export enum EditorActionTypes {
 }
 
 export class LoadEditor implements Action {
-  readonly type = EditorActionTypes.LoadEditor;
+  public readonly type = EditorActionTypes.LoadEditor;
 }
 
 export class EditorLoadError implements Action {
-  readonly type = EditorActionTypes.EditorLoadError;
+  public readonly type = EditorActionTypes.EditorLoadError;
   constructor(public payload: any) {}
 }
 
 export class EditorLoaded implements Action {
-  readonly type = EditorActionTypes.EditorLoaded;
+  public readonly type = EditorActionTypes.EditorLoaded;
   constructor(public payload: Entity[]) {}
 }
 

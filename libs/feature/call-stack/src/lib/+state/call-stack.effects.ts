@@ -1,18 +1,18 @@
 import { Injectable } from '@angular/core';
-import { Effect, Actions } from '@ngrx/effects';
+import { Actions, Effect } from '@ngrx/effects';
 import { DataPersistence } from '@nrwl/nx';
 
-import { CallStackPartialState } from './call-stack.reducer';
 import {
-  LoadCallStack,
+  CallStackActionTypes,
   CallStackLoaded,
   CallStackLoadError,
-  CallStackActionTypes
+  LoadCallStack
 } from './call-stack.actions';
+import { CallStackPartialState } from './call-stack.reducer';
 
 @Injectable()
 export class CallStackEffects {
-  @Effect() loadCallStack$ = this.dataPersistence.fetch(
+  @Effect() public loadCallStack$ = this.dataPersistence.fetch(
     CallStackActionTypes.LoadCallStack,
     {
       run: (action: LoadCallStack, state: CallStackPartialState) => {

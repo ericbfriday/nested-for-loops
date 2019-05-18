@@ -40,7 +40,6 @@ export function settingsReducer(
         list: action.payload,
         loaded: true
       };
-      break;
     }
   }
   return state;

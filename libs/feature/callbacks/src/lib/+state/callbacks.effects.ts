@@ -1,18 +1,18 @@
 import { Injectable } from '@angular/core';
-import { Effect, Actions } from '@ngrx/effects';
+import { Actions, Effect } from '@ngrx/effects';
 import { DataPersistence } from '@nrwl/nx';
 
-import { CallbacksPartialState } from './callbacks.reducer';
 import {
-  LoadCallbacks,
+  CallbacksActionTypes,
   CallbacksLoaded,
   CallbacksLoadError,
-  CallbacksActionTypes
+  LoadCallbacks
 } from './callbacks.actions';
+import { CallbacksPartialState } from './callbacks.reducer';
 
 @Injectable()
 export class CallbacksEffects {
-  @Effect() loadCallbacks$ = this.dataPersistence.fetch(
+  @Effect() public loadCallbacks$ = this.dataPersistence.fetch(
     CallbacksActionTypes.LoadCallbacks,
     {
       run: (action: LoadCallbacks, state: CallbacksPartialState) => {

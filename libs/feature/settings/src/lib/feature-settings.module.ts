@@ -1,14 +1,14 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { StoreModule } from '@ngrx/store';
+import { NgModule } from '@angular/core';
 import { EffectsModule } from '@ngrx/effects';
-import {
-  SETTINGS_FEATURE_KEY,
-  initialState as settingsInitialState,
-  settingsReducer
-} from './+state/settings.reducer';
+import { StoreModule } from '@ngrx/store';
 import { SettingsEffects } from './+state/settings.effects';
 import { SettingsFacade } from './+state/settings.facade';
+import {
+  initialState as settingsInitialState,
+  SETTINGS_FEATURE_KEY,
+  settingsReducer
+} from './+state/settings.reducer';
 
 @NgModule({
   imports: [

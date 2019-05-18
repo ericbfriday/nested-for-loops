@@ -1,18 +1,18 @@
 import { Injectable } from '@angular/core';
-import { Effect, Actions } from '@ngrx/effects';
+import { Actions, Effect } from '@ngrx/effects';
 import { DataPersistence } from '@nrwl/nx';
 
-import { NestedForLoopsRootPartialState } from './nested-for-loops-root.reducer';
 import {
   LoadNestedForLoopsRoot,
+  NestedForLoopsRootActionTypes,
   NestedForLoopsRootLoaded,
-  NestedForLoopsRootLoadError,
-  NestedForLoopsRootActionTypes
+  NestedForLoopsRootLoadError
 } from './nested-for-loops-root.actions';
+import { NestedForLoopsRootPartialState } from './nested-for-loops-root.reducer';
 
 @Injectable()
 export class NestedForLoopsRootEffects {
-  @Effect() loadNestedForLoopsRoot$ = this.dataPersistence.fetch(
+  @Effect() public loadNestedForLoopsRoot$ = this.dataPersistence.fetch(
     NestedForLoopsRootActionTypes.LoadNestedForLoopsRoot,
     {
       run: (

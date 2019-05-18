@@ -1,8 +1,8 @@
 import {
-  Component,
-  OnInit,
   ChangeDetectionStrategy,
-  Input
+  Component,
+  Input,
+  OnInit
 } from '@angular/core';
 
 @Component({
@@ -38,5 +38,5 @@ export class FullScreenSpinnerComponent implements OnInit {
   @Input() public message: string;
   constructor() {}
 
-  ngOnInit() {}
+  public ngOnInit() {}
 }

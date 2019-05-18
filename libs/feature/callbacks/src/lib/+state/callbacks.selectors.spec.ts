@@ -1,9 +1,9 @@
-import { Entity, CallbacksState } from './callbacks.reducer';
+import { CallbacksState, Entity } from './callbacks.reducer';
 import { callbacksQuery } from './callbacks.selectors';
 
 describe('Callbacks Selectors', () => {
   const ERROR_MSG = 'No Error Available';
-  const getCallbacksId = it => it['id'];
+  const getCallbacksId = it => it.id;
 
   let storeState;
 
@@ -42,13 +42,13 @@ describe('Callbacks Selectors', () => {
       expect(selId).toBe('PRODUCT-BBB');
     });
 
-    it("getLoaded() should return the current 'loaded' status", () => {
+    it('getLoaded() should return the current \'loaded\' status', () => {
       const result = callbacksQuery.getLoaded(storeState);
 
       expect(result).toBe(true);
     });
 
-    it("getError() should return the current 'error' storeState", () => {
+    it('getError() should return the current \'error\' storeState', () => {
       const result = callbacksQuery.getError(storeState);
 
       expect(result).toBe(ERROR_MSG);

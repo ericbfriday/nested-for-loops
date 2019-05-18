@@ -1,14 +1,14 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { StoreModule } from '@ngrx/store';
+import { NgModule } from '@angular/core';
 import { EffectsModule } from '@ngrx/effects';
-import {
-  CALLSTACK_FEATURE_KEY,
-  initialState as callStackInitialState,
-  callStackReducer
-} from './+state/call-stack.reducer';
+import { StoreModule } from '@ngrx/store';
 import { CallStackEffects } from './+state/call-stack.effects';
 import { CallStackFacade } from './+state/call-stack.facade';
+import {
+  CALLSTACK_FEATURE_KEY,
+  callStackReducer,
+  initialState as callStackInitialState
+} from './+state/call-stack.reducer';
 
 @NgModule({
   imports: [

@@ -30,8 +30,8 @@ const getSelectedUserCode = createSelector(
   getAllUserCode,
   getSelectedId,
   (userCode, id) => {
-    const result = userCode.find(it => it['id'] === id);
-    return result ? Object.assign({}, result) : undefined;
+    const result = userCode.find(it => it.id === id);
+    return result ? {...result} : undefined;
   }
 );
 

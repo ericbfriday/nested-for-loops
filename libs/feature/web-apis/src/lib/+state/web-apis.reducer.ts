@@ -40,7 +40,6 @@ export function webApisReducer(
         list: action.payload,
         loaded: true
       };
-      break;
     }
   }
   return state;

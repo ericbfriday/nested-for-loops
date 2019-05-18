@@ -3,21 +3,21 @@ import { TestBed } from '@angular/core/testing';
 import { readFirst } from '@nrwl/nx/testing';
 
 import { EffectsModule } from '@ngrx/effects';
-import { StoreModule, Store } from '@ngrx/store';
+import { Store, StoreModule } from '@ngrx/store';
 
 import { NxModule } from '@nrwl/nx';
 
 import { RenderQueueEffects } from './render-queue.effects';
 import { RenderQueueFacade } from './render-queue.facade';
 
-import { renderQueueQuery } from './render-queue.selectors';
 import { LoadRenderQueue, RenderQueueLoaded } from './render-queue.actions';
 import {
-  RenderQueueState,
   Entity,
   initialState,
-  renderQueueReducer
+  renderQueueReducer,
+  RenderQueueState
 } from './render-queue.reducer';
+import { renderQueueQuery } from './render-queue.selectors';
 
 interface TestSchema {
   renderQueue: RenderQueueState;

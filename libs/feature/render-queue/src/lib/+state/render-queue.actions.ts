@@ -8,16 +8,16 @@ export enum RenderQueueActionTypes {
 }
 
 export class LoadRenderQueue implements Action {
-  readonly type = RenderQueueActionTypes.LoadRenderQueue;
+  public readonly type = RenderQueueActionTypes.LoadRenderQueue;
 }
 
 export class RenderQueueLoadError implements Action {
-  readonly type = RenderQueueActionTypes.RenderQueueLoadError;
+  public readonly type = RenderQueueActionTypes.RenderQueueLoadError;
   constructor(public payload: any) {}
 }
 
 export class RenderQueueLoaded implements Action {
-  readonly type = RenderQueueActionTypes.RenderQueueLoaded;
+  public readonly type = RenderQueueActionTypes.RenderQueueLoaded;
   constructor(public payload: Entity[]) {}
 }
 

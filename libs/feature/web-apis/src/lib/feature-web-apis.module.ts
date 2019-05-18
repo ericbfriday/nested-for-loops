@@ -1,14 +1,14 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { StoreModule } from '@ngrx/store';
+import { NgModule } from '@angular/core';
 import { EffectsModule } from '@ngrx/effects';
-import {
-  WEBAPIS_FEATURE_KEY,
-  initialState as webApisInitialState,
-  webApisReducer
-} from './+state/web-apis.reducer';
+import { StoreModule } from '@ngrx/store';
 import { WebApisEffects } from './+state/web-apis.effects';
 import { WebApisFacade } from './+state/web-apis.facade';
+import {
+  initialState as webApisInitialState,
+  WEBAPIS_FEATURE_KEY,
+  webApisReducer
+} from './+state/web-apis.reducer';
 
 @NgModule({
   imports: [

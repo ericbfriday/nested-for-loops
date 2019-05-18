@@ -1,18 +1,18 @@
 import { Injectable } from '@angular/core';
-import { Effect, Actions } from '@ngrx/effects';
+import { Actions, Effect } from '@ngrx/effects';
 import { DataPersistence } from '@nrwl/nx';
 
-import { UserCodePartialState } from './user-code.reducer';
 import {
   LoadUserCode,
+  UserCodeActionTypes,
   UserCodeLoaded,
-  UserCodeLoadError,
-  UserCodeActionTypes
+  UserCodeLoadError
 } from './user-code.actions';
+import { UserCodePartialState } from './user-code.reducer';
 
 @Injectable()
 export class UserCodeEffects {
-  @Effect() loadUserCode$ = this.dataPersistence.fetch(
+  @Effect() public loadUserCode$ = this.dataPersistence.fetch(
     UserCodeActionTypes.LoadUserCode,
     {
       run: (action: LoadUserCode, state: UserCodePartialState) => {

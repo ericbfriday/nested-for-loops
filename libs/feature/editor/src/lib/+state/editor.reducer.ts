@@ -40,7 +40,6 @@ export function editorReducer(
         list: action.payload,
         loaded: true
       };
-      break;
     }
   }
   return state;

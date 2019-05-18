@@ -40,7 +40,6 @@ export function callbacksReducer(
         list: action.payload,
         loaded: true
       };
-      break;
     }
   }
   return state;

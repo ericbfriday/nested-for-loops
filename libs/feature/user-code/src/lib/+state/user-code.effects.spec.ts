@@ -1,17 +1,17 @@
-import { TestBed, async } from '@angular/core/testing';
+import { async, TestBed } from '@angular/core/testing';
 
 import { Observable } from 'rxjs';
 
 import { EffectsModule } from '@ngrx/effects';
-import { StoreModule } from '@ngrx/store';
 import { provideMockActions } from '@ngrx/effects/testing';
+import { StoreModule } from '@ngrx/store';
 
 import { NxModule } from '@nrwl/nx';
 import { DataPersistence } from '@nrwl/nx';
 import { hot } from '@nrwl/nx/testing';
 
-import { UserCodeEffects } from './user-code.effects';
 import { LoadUserCode, UserCodeLoaded } from './user-code.actions';
+import { UserCodeEffects } from './user-code.effects';
 
 describe('UserCodeEffects', () => {
   let actions: Observable<any>;

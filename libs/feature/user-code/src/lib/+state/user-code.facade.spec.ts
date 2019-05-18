@@ -3,21 +3,21 @@ import { TestBed } from '@angular/core/testing';
 import { readFirst } from '@nrwl/nx/testing';
 
 import { EffectsModule } from '@ngrx/effects';
-import { StoreModule, Store } from '@ngrx/store';
+import { Store, StoreModule } from '@ngrx/store';
 
 import { NxModule } from '@nrwl/nx';
 
 import { UserCodeEffects } from './user-code.effects';
 import { UserCodeFacade } from './user-code.facade';
 
-import { userCodeQuery } from './user-code.selectors';
 import { LoadUserCode, UserCodeLoaded } from './user-code.actions';
 import {
-  UserCodeState,
   Entity,
   initialState,
-  userCodeReducer
+  userCodeReducer,
+  UserCodeState
 } from './user-code.reducer';
+import { userCodeQuery } from './user-code.selectors';
 
 interface TestSchema {
   userCode: UserCodeState;

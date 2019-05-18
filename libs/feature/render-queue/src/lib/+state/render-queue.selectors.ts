@@ -33,8 +33,8 @@ const getSelectedRenderQueue = createSelector(
   getAllRenderQueue,
   getSelectedId,
   (renderQueue, id) => {
-    const result = renderQueue.find(it => it['id'] === id);
-    return result ? Object.assign({}, result) : undefined;
+    const result = renderQueue.find(it => it.id === id);
+    return result ? {...result} : undefined;
   }
 );
 

@@ -1,9 +1,9 @@
-import { Entity, EditorState } from './editor.reducer';
+import { EditorState, Entity } from './editor.reducer';
 import { editorQuery } from './editor.selectors';
 
 describe('Editor Selectors', () => {
   const ERROR_MSG = 'No Error Available';
-  const getEditorId = it => it['id'];
+  const getEditorId = it => it.id;
 
   let storeState;
 
@@ -42,13 +42,13 @@ describe('Editor Selectors', () => {
       expect(selId).toBe('PRODUCT-BBB');
     });
 
-    it("getLoaded() should return the current 'loaded' status", () => {
+    it('getLoaded() should return the current \'loaded\' status', () => {
       const result = editorQuery.getLoaded(storeState);
 
       expect(result).toBe(true);
     });
 
-    it("getError() should return the current 'error' storeState", () => {
+    it('getError() should return the current \'error\' storeState', () => {
       const result = editorQuery.getError(storeState);
 
       expect(result).toBe(ERROR_MSG);
