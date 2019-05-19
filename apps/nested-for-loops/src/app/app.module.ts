@@ -22,6 +22,11 @@ import {
   nestedForLoopsRootReducer
 } from './+root-state/nested-for-loops-root.reducer';
 import { AppComponent } from './app.component';
+import {
+  initialState as codeInitialState,
+  codeReducer
+} from './code/+state/code.reducer';
+import { CodeModule } from './code/code.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -35,9 +40,12 @@ import { AppComponent } from './app.component';
     // NGRX
     NxModule.forRoot(),
     StoreModule.forRoot(
-      { nestedForLoopsRoot: nestedForLoopsRootReducer },
+      { codeReducer, nestedForLoopsRoot: nestedForLoopsRootReducer },
       {
-        initialState: { nestedForLoopsRoot: nestedForLoopsRootInitialState },
+        initialState: {
+          nestedForLoopsRoot: nestedForLoopsRootInitialState,
+          codeReducer: codeInitialState
+        },
         metaReducers: !environment.production ? [storeFreeze] : []
       }
     ),
@@ -47,7 +55,8 @@ import { AppComponent } from './app.component';
     UiKitSharedComponentsModule,
     FeatureJstsEditorModule,
     // Material Imports
-    MatToolbarModule
+    MatToolbarModule,
+    CodeModule
   ],
   providers: [NestedForLoopsRootFacade],
   bootstrap: [AppComponent]

@@ -2,6 +2,7 @@ import {
   NestedForLoopsRootAction,
   NestedForLoopsRootActionTypes
 } from './nested-for-loops-root.actions';
+import { State } from '@ngrx/store';
 
 export const NESTEDFORLOOPSROOT_FEATURE_KEY = 'nestedForLoopsRoot';
 
@@ -12,15 +13,13 @@ export const NESTEDFORLOOPSROOT_FEATURE_KEY = 'nestedForLoopsRoot';
  *
  *  Note: replace if already defined in another module
  */
-
-/* tslint:disable:no-empty-interface */
 export interface Entity {}
 
 export interface NestedForLoopsRootState {
   list: Entity[]; // list of NestedForLoopsRoot; analogous to a sql normalized table
   selectedId?: string | number; // which NestedForLoopsRoot record has been selected
   loaded: boolean; // has the NestedForLoopsRoot list been loaded
-  error?: any; // last none error (if any)
+  error?: Error; // last none error (if any)
 }
 
 export interface NestedForLoopsRootPartialState {

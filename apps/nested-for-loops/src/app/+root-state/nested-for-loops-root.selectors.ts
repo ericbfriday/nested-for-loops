@@ -1,7 +1,8 @@
 import { createFeatureSelector, createSelector } from '@ngrx/store';
 import {
   NESTEDFORLOOPSROOT_FEATURE_KEY,
-  NestedForLoopsRootState
+  NestedForLoopsRootState,
+  Entity
 } from './nested-for-loops-root.reducer';
 
 // Lookup the 'NestedForLoopsRoot' feature state managed by NgRx
@@ -29,14 +30,14 @@ const getSelectedId = createSelector(
   getNestedForLoopsRootState,
   (state: NestedForLoopsRootState) => state.selectedId
 );
-const getSelectedNestedForLoopsRoot = createSelector(
-  getAllNestedForLoopsRoot,
-  getSelectedId,
-  (nestedForLoopsRoot, id) => {
-    const result = nestedForLoopsRoot.find(it => it.id === id);
-    return result ? {...result} : undefined;
-  }
-);
+// const getSelectedNestedForLoopsRoot = createSelector(
+//   getAllNestedForLoopsRoot,
+//   getSelectedId,
+//   (nestedForLoopsRoot, id) => {
+//     const result = nestedForLoopsRoot.find(it => !!it.id && it.id === id);
+//     return result ? { ...result } : undefined;
+//   }
+// );
 
 export const nestedForLoopsRootQuery = {
   getLoaded,

@@ -3,6 +3,7 @@
 
 // @import '@angular/material/prebuilt-themes/deeppurple-amber.css';
 @import 'styles/_theme';
+@import 'styles/spinner';
 
 html,
 body {
@@ -14,8 +15,6 @@ body {
   font-family: 'Fira Code VF', 'Fira Code', 'Hack', monospace;
   font-variation-settings: 'wght' 400;
 }
-
-@import 'styles/spinner';
 
 .code {
   font: 14px/1.5em 'Fira Code';

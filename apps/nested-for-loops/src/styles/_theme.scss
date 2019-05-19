@@ -11,7 +11,7 @@
 // Fonts
 // Commenting out default Roboto and doing a find all -> replace all for Fira Code
 // @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500');
-@import '../assets/fonts/firacode/fira_code.css';
+@import 'apps/nested-for-loops/src/assets/fonts/firacode/fira_code';
 
 $fontConfig: (
   display-4: mat-typography-level(112px, 112px, 300, 'Fira Code', -0.0134em),
