@@ -42,6 +42,6 @@ const getSelectedId = createSelector(
 export const nestedForLoopsRootQuery = {
   getLoaded,
   getError,
-  getAllNestedForLoopsRoot,
-  getSelectedNestedForLoopsRoot
+  getAllNestedForLoopsRoot
+  // getSelectedNestedForLoopsRoot
 };

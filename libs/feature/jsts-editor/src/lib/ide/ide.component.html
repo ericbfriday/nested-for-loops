@@ -1,25 +1,30 @@
 <!-- editing -->
 <div className="flexChild columnParent">
   <div className="editor-switch">
-    <button (click)=="{{saveAndRunCode}}">Save + Run</button>
+    <button (click)="(saveAndRunCode)" label="Save + Run"></button>
   </div>
-  <jsts-editor-ace mode="javascript" (onBlur)="onEditBlur"zs
-  (onCodeChange)={{this.onCodeChange}} [initialValue]="rawCode$" />
+  <jsts-editor-ace
+    (onBlur)="onEditBlur()"
+    (onCodeChange)="onCodeChange()"
+    [initialValue]="initialValue"
+  >
+  </jsts-editor-ace
+  ><!-- [mode]="'javascript'" -->
 </div>
 
 <!-- not editing -->
-<div className="flexChild columnParent">
+<!-- <div className="flexChild columnParent">
   <div className="editor-switch">
-    <button (click)="onEditFocus">Edit</button>
-    <button (click)="runCode">Rerun</button>
-    <button (click)="pauseCode">Pause</button>
-    <button (click)="resumeCode">Resume</button>
+    <button (click)="onEditFocus">Edit
+    <button (click)="runCode">Rerun
+    <button (click)="pauseCode">Pause
+    <button (click)="resumeCode">Resume
   </div>
   <div
     className="editor flexChild"
     [dangerouslySetInnerHTML]=wrappedHtml$
-    (click)="onEditFocus}"
+    (click)="onEditFocus"
     ref="code"
-    data-lines="{lines}"
+    data-lines="lines"
   ></div>
-</div>
+</div> -->

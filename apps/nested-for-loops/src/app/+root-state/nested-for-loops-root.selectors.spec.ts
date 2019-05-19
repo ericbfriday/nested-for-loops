@@ -40,22 +40,22 @@ describe('NestedForLoopsRoot Selectors', () => {
       expect(selId).toBe('PRODUCT-BBB');
     });
 
-    it('getSelectedNestedForLoopsRoot() should return the selected Entity', () => {
-      const result = nestedForLoopsRootQuery.getSelectedNestedForLoopsRoot(
-        storeState
-      );
-      const selId = getNestedForLoopsRootId(result);
+    // it('getSelectedNestedForLoopsRoot() should return the selected Entity', () => {
+    //   const result = nestedForLoopsRootQuery.getSelectedNestedForLoopsRoot(
+    //     storeState
+    //   );
+    //   const selId = getNestedForLoopsRootId(result);
 
-      expect(selId).toBe('PRODUCT-BBB');
-    });
+    //   expect(selId).toBe('PRODUCT-BBB');
+    // });
 
-    it('getLoaded() should return the current \'loaded\' status', () => {
+    it("getLoaded() should return the current 'loaded' status", () => {
       const result = nestedForLoopsRootQuery.getLoaded(storeState);
 
       expect(result).toBe(true);
     });
 
-    it('getError() should return the current \'error\' storeState', () => {
+    it("getError() should return the current 'error' storeState", () => {
       const result = nestedForLoopsRootQuery.getError(storeState);
 
       expect(result).toBe(ERROR_MSG);

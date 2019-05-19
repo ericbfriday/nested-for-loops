@@ -18,9 +18,9 @@ export class NestedForLoopsRootFacade {
   public allNestedForLoopsRoot$: Observable<Entity[]> = this.store.pipe(
     select(nestedForLoopsRootQuery.getAllNestedForLoopsRoot)
   );
-  public selectedNestedForLoopsRoot$: Observable<Entity> = this.store.pipe(
-    select(nestedForLoopsRootQuery.getSelectedNestedForLoopsRoot)
-  );
+  // public selectedNestedForLoopsRoot$: Observable<Entity> = this.store.pipe(
+  //   select(nestedForLoopsRootQuery.getSelectedNestedForLoopsRoot)
+  // );
 
   constructor(private store: Store<NestedForLoopsRootPartialState>) {}
 
