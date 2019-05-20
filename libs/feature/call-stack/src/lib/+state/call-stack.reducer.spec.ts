@@ -7,7 +7,7 @@ import {
 } from './call-stack.reducer';
 
 describe('CallStack Reducer', () => {
-  const getCallStackId = it => it.id;
+  const getCallStackId = it => it['id'];
   let createCallStack;
 
   beforeEach(() => {

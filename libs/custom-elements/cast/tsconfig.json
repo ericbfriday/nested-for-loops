@@ -1,0 +1,9 @@
+{
+  "extends": "../../../tsconfig.json",
+  "compilerOptions": {
+    "target": "es2015",
+    "types": ["node", "jest", "ace"]
+  },
+  "include": ["**/*.ts"],
+  "exclude": ["**/*.d.ts"]
+}

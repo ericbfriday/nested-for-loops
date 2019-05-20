@@ -7,7 +7,7 @@ import {
 } from './web-apis.reducer';
 
 describe('WebApis Reducer', () => {
-  const getWebApisId = it => it.id;
+  const getWebApisId = it => it['id'];
   let createWebApis;
 
   beforeEach(() => {

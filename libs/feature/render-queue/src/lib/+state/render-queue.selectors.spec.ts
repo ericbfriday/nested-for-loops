@@ -3,7 +3,7 @@ import { renderQueueQuery } from './render-queue.selectors';
 
 describe('RenderQueue Selectors', () => {
   const ERROR_MSG = 'No Error Available';
-  const getRenderQueueId = it => it.id;
+  const getRenderQueueId = it => it['id'];
 
   let storeState;
 

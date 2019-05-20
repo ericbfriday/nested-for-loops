@@ -3,7 +3,7 @@ import { webApisQuery } from './web-apis.selectors';
 
 describe('WebApis Selectors', () => {
   const ERROR_MSG = 'No Error Available';
-  const getWebApisId = it => it.id;
+  const getWebApisId = it => it['id'];
 
   let storeState;
 

@@ -9,23 +9,38 @@
     "importHelpers": true,
     "target": "es5",
     "module": "es2015",
-    "typeRoots": ["node_modules/@types"],
-    "lib": ["es2017", "dom"],
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "lib": [
+      "es2017",
+      "dom"
+    ],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@friday-friday/weevil": ["libs/weevil/src/index.ts"],
-      "@friday-friday/deval": ["libs/deval/src/index.ts"],
-      "@friday-friday/little-friends": ["libs/little-friends/src/index.ts"],
+      "@friday-friday/weevil": [
+        "libs/weevil/src/index.ts"
+      ],
+      "@friday-friday/deval": [
+        "libs/deval/src/index.ts"
+      ],
+      "@friday-friday/little-friends": [
+        "libs/little-friends/src/index.ts"
+      ],
       "@friday-friday/feature/callbacks": [
         "libs/feature/callbacks/src/index.ts"
       ],
       "@friday-friday/feature/user-code": [
         "libs/feature/user-code/src/index.ts"
       ],
-      "@friday-friday/feature/web-apis": ["libs/feature/web-apis/src/index.ts"],
-      "@friday-friday/feature/settings": ["libs/feature/settings/src/index.ts"],
+      "@friday-friday/feature/web-apis": [
+        "libs/feature/web-apis/src/index.ts"
+      ],
+      "@friday-friday/feature/settings": [
+        "libs/feature/settings/src/index.ts"
+      ],
       "@friday-friday/feature/call-stack": [
         "libs/feature/call-stack/src/index.ts"
       ],
@@ -41,8 +56,22 @@
       "@friday-friday/feature/jsts-editor": [
         "libs/feature/jsts-editor/src/index.ts"
       ],
-      "@friday-friday/utils/common": ["libs/utils/common/src/index.ts"]
+      "@friday-friday/utils/common": [
+        "libs/utils/common/src/index.ts"
+      ],
+      "@friday-friday/custom-elements/cast": [
+        "libs/custom-elements/cast/src/index.ts"
+      ],
+      "ace-editor": [
+        "dist/ace-editor"
+      ],
+      "ace-editor/*": [
+        "dist/ace-editor/*"
+      ]
     }
   },
-  "exclude": ["node_modules", "tmp"]
+  "exclude": [
+    "node_modules",
+    "tmp"
+  ]
 }

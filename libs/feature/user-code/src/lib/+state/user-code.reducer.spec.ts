@@ -7,7 +7,7 @@ import {
 } from './user-code.reducer';
 
 describe('UserCode Reducer', () => {
-  const getUserCodeId = it => it.id;
+  const getUserCodeId = it => it['id'];
   let createUserCode;
 
   beforeEach(() => {

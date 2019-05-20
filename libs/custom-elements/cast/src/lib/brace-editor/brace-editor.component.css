@@ -1,0 +1,55 @@
+.ace-editor {
+  width: 500px;
+  height: 500px;
+}
+
+#contents {
+  width: 500px;
+  height: 500px;
+  position: absolute;
+  left: 500px;
+  top: 0;
+}
+/* #aceEditorWrapper {
+  position: absolute;
+  margin: 0px;
+  min-height: 400px;
+  width: 40%;
+  display: inline-block;
+} */
+
+.bottom-right-btn {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  z-index: 5;
+}
+
+/* .editor {
+  min-height: 100%;
+  width: 100%;
+  font-family: 'Fira Code VF', 'Fira Code', 'Hack', monospace;
+  font-size: 16px;
+  line-height: 1.75;
+  display: inline-block;
+  white-space: pre;
+  padding-left: 2em;
+  color: #333;
+  overflow-y: hidden;
+  position: relative;
+}
+
+.editor:before {
+  content: attr(data-lines);
+  */
+/*content: "1\a 2\A 3\A 4\A 5\A 6\A 7\A 8\A 9\A 10\A 11\A 12\A 13\A 14\A 15\A 16\A 17\A";*/
+/*  position: absolute;
+  top: 0;
+  left: 0;
+  width: 41px;
+  padding-left: 7.5px;
+  text-align: center;
+  background: #fbf1d3;
+  height: 100%;
+  white-space: pre;
+} */

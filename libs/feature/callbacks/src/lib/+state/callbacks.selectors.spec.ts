@@ -3,7 +3,7 @@ import { callbacksQuery } from './callbacks.selectors';
 
 describe('Callbacks Selectors', () => {
   const ERROR_MSG = 'No Error Available';
-  const getCallbacksId = it => it.id;
+  const getCallbacksId = it => it['id'];
 
   let storeState;
 

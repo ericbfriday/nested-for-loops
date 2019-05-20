@@ -1,17 +1,17 @@
 {
-  "extends": "../src/tsconfig.app.json",
+  "extends": "../tsconfig.json",
   "compilerOptions": {
-    "types": [
-      "node"
-    ]
+    "types": ["node"]
   },
   "exclude": [
-    "../src/test.ts",
-    "../src/**/*.spec.ts",
-    "../projects/**/*.spec.ts"
+    "../apps/**/src/test.ts",
+    "../apps/**/*.spec.ts",
+    "../libs/**/*.spec.ts",
+    "../tools/**/*.spec.ts",
+    "../apps/**/*.test.ts",
+    "../libs/**/*.test.ts",
+    "../tools/**/*.test.ts",
+    "../apps/nested-for-loops-e2e/**/*"
   ],
-  "include": [
-    "../src/**/*",
-    "../projects/**/*"
-  ]
+  "include": ["../apps/**/*", "../libs/**/*"]
 }

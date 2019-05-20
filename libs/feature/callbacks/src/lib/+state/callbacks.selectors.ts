@@ -30,7 +30,7 @@ const getSelectedCallbacks = createSelector(
   getAllCallbacks,
   getSelectedId,
   (callbacks, id) => {
-    const result = callbacks.find(it => it.id === id);
+    const result = callbacks.find(it => it['id'] === id);
     return result ? {...result} : undefined;
   }
 );

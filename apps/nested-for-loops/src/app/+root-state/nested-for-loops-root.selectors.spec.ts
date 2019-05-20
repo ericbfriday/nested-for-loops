@@ -6,7 +6,7 @@ import { nestedForLoopsRootQuery } from './nested-for-loops-root.selectors';
 
 describe('NestedForLoopsRoot Selectors', () => {
   const ERROR_MSG = 'No Error Available';
-  const getNestedForLoopsRootId = it => it.id;
+  const getNestedForLoopsRootId = it => it['id'];
 
   let storeState;
 

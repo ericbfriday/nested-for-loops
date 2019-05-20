@@ -7,7 +7,7 @@ import {
 } from './nested-for-loops-root.reducer';
 
 describe('NestedForLoopsRoot Reducer', () => {
-  const getNestedForLoopsRootId = it => it.id;
+  const getNestedForLoopsRootId = it => it['id'];
   let createNestedForLoopsRoot;
 
   beforeEach(() => {

@@ -30,7 +30,7 @@ const getSelectedSettings = createSelector(
   getAllSettings,
   getSelectedId,
   (settings, id) => {
-    const result = settings.find(it => it.id === id);
+    const result = settings.find(it => it['id'] === id);
     return result ? {...result} : undefined;
   }
 );

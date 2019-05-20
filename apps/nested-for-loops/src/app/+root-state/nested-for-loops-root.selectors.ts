@@ -34,7 +34,7 @@ const getSelectedId = createSelector(
 //   getAllNestedForLoopsRoot,
 //   getSelectedId,
 //   (nestedForLoopsRoot, id) => {
-//     const result = nestedForLoopsRoot.find(it => !!it.id && it.id === id);
+//     const result = nestedForLoopsRoot.find(it => !!it['id'] && it['id'] === id);
 //     return result ? { ...result } : undefined;
 //   }
 // );

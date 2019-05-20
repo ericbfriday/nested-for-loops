@@ -3,7 +3,7 @@ import { callStackQuery } from './call-stack.selectors';
 
 describe('CallStack Selectors', () => {
   const ERROR_MSG = 'No Error Available';
-  const getCallStackId = it => it.id;
+  const getCallStackId = it => it['id'];
 
   let storeState;
 

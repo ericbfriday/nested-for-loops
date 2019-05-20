@@ -7,7 +7,7 @@ import {
 } from './callbacks.reducer';
 
 describe('Callbacks Reducer', () => {
-  const getCallbacksId = it => it.id;
+  const getCallbacksId = it => it['id'];
   let createCallbacks;
 
   beforeEach(() => {

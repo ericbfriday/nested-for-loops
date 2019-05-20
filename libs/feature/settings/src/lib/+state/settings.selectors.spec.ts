@@ -3,7 +3,7 @@ import { settingsQuery } from './settings.selectors';
 
 describe('Settings Selectors', () => {
   const ERROR_MSG = 'No Error Available';
-  const getSettingsId = it => it.id;
+  const getSettingsId = it => it['id'];
 
   let storeState;
 

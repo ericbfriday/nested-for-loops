@@ -8,7 +8,7 @@ import {
 } from './render-queue.reducer';
 
 describe('RenderQueue Reducer', () => {
-  const getRenderQueueId = it => it.id;
+  const getRenderQueueId = it => it['id'];
   let createRenderQueue;
 
   beforeEach(() => {

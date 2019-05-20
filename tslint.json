@@ -36,6 +36,8 @@
     "linebreak-style": false,
     "match-default-export-name": false,
     "missing-jsdoc": false,
+    "no-empty": false,
+    "no-empty-interface": false,
     "no-unnecessary-class": false,
     "no-implicit-dependencies": false,
     "no-relative-imports": false,

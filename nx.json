@@ -52,6 +52,9 @@
     },
     "utils-common": {
       "tags": []
+    },
+    "custom-elements-cast": {
+      "tags": []
     }
   }
 }

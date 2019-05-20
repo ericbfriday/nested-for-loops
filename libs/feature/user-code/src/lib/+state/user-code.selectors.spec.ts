@@ -3,7 +3,7 @@ import { userCodeQuery } from './user-code.selectors';
 
 describe('UserCode Selectors', () => {
   const ERROR_MSG = 'No Error Available';
-  const getUserCodeId = it => it.id;
+  const getUserCodeId = it => it['id'];
 
   let storeState;
 

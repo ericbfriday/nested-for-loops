@@ -7,7 +7,7 @@ import {
 } from './settings.reducer';
 
 describe('Settings Reducer', () => {
-  const getSettingsId = it => it.id;
+  const getSettingsId = it => it['id'];
   let createSettings;
 
   beforeEach(() => {

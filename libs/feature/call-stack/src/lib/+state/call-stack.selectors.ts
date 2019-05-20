@@ -30,7 +30,7 @@ const getSelectedCallStack = createSelector(
   getAllCallStack,
   getSelectedId,
   (callStack, id) => {
-    const result = callStack.find(it => it.id === id);
+    const result = callStack.find(it => it['id'] === id);
     return result ? {...result} : undefined;
   }
 );

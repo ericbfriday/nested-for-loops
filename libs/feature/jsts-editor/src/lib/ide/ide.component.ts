@@ -9,11 +9,12 @@ import {
   Input
 } from '@angular/core';
 // tslint:disable import-name no-require-imports no-var-requires
-import * as ace from 'brace';
 import { Observable } from 'rxjs';
-require('brace/mode/javascript');
-require('brace/mode/html');
-require('brace/theme/monokai');
+
+import * as acemodule from 'ace-builds/src-noconflict/ace';
+acemodule.require('ace/mode/javascript');
+acemodule.require('ace/mode/html');
+acemodule.require('ace/theme/monokai');
 
 @Component({
   selector: 'jsts-editor-ide',
@@ -21,9 +22,9 @@ require('brace/theme/monokai');
   styleUrls: ['./ide.component.scss']
 })
 export class IdeComponent implements OnInit, AfterViewInit {
-  public editor: ace.Editor;
+  public editor: acemodule.Editor;
   public mode: string = 'javascript';
-  public editSession: ace.IEditSession;
+  public editSession: acemodule.IEditSession;
   @Input()
   public initialValue: string[];
   public codeChangeEmitter: EventEmitter<string[]> = new EventEmitter();
@@ -40,7 +41,7 @@ export class IdeComponent implements OnInit, AfterViewInit {
   }
 
   public ngAfterViewInit(): void {
-    // this.editor = ace.edit(this.aceWrapper);
+    // this.editor = acemodule.edit(this.aceWrapper);
     // this.editSession = this.editor.getSession();
     // this.editor.getSession().setMode(`ace/mode/${this.mode}`);
     // this.editor.setTheme('ace/theme/monokai');

@@ -7,10 +7,10 @@ import {
   ViewChild
 } from '@angular/core';
 // tslint:disable import-name no-require-imports no-var-requires
-import * as ace from 'brace';
-require('brace/mode/javascript');
-require('brace/mode/html');
-require('brace/theme/monokai');
+import * as acemodule from 'ace-builds/src-noconflict/ace';
+acemodule.require('ace/mode/javascript');
+acemodule.require('ace/mode/html');
+acemodule.require('ace/theme/monokai');
 
 @Component({
   selector: 'jsts-editor-ace',
@@ -54,8 +54,8 @@ require('brace/theme/monokai');
   ]
 })
 export class AceComponent implements AfterContentInit {
-  public editor: ace.Editor;
-  public editSession: ace.IEditSession;
+  public editor: acemodule.Editor;
+  public editSession: acemodule.IEditSession;
   @Input()
   public mode: string = 'javascript';
   @Input()
@@ -67,7 +67,7 @@ export class AceComponent implements AfterContentInit {
   constructor() {}
 
   public ngAfterContentInit(): void {
-    this.editor = ace.edit('aceEditorWrapper'); // this.editorElement);
+    this.editor = acemodule.edit('aceEditorWrapper'); // this.editorElement);
     this.editSession = this.editor.getSession();
 
     this.editor.getSession().setMode(`ace/mode/javascript`); // ${this.mode}`);
