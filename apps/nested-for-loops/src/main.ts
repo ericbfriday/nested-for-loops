@@ -18,7 +18,7 @@ setTimeout(
     platformBrowserDynamic()
       .bootstrapModule(AppModule)
       .catch((err: Error) => console.error(err)),
-  3000
+  1000
 );
 
 // platformBrowserDynamic()

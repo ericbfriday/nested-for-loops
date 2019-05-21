@@ -11,11 +11,14 @@ import {
   initialState as codeInitialState
 } from './+state/code.reducer';
 import { EditorComponent } from './editor/editor.component';
+import { AceEditorModule } from './editor/ace/module';
+import { AceExampleComponent } from './editor/ace/example/app.component';
 
 @NgModule({
-  declarations: [EditorComponent],
+  declarations: [EditorComponent, AceExampleComponent],
   imports: [
     CommonModule,
+    AceEditorModule,
     StoreModule.forFeature(CODE_FEATURE_KEY, codeReducer, {
       initialState: codeInitialState
     }),
@@ -24,6 +27,6 @@ import { EditorComponent } from './editor/editor.component';
     FeatureJstsEditorModule
   ],
   providers: [CodeFacade],
-  exports: [EditorComponent]
+  exports: [AceEditorModule, EditorComponent]
 })
 export class CodeModule {}

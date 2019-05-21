@@ -573,36 +573,79 @@
         }
       }
     },
-    "ace-editor": {
-      "root": "libs/ace-editor",
-      "sourceRoot": "libs/ace-editor/src",
+    "ts-ace-editor": {
+      "root": "libs/ts-ace-editor",
+      "sourceRoot": "libs/ts-ace-editor/src",
       "projectType": "library",
-      "prefix": "ace-editor",
+      "prefix": "ts-ace",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",
           "options": {
-            "tsConfig": "libs/ace-editor/tsconfig.lib.json",
-            "project": "libs/ace-editor/ng-package.json"
-          }
-        },
-        "test": {
-          "builder": "@angular-devkit/build-angular:karma",
-          "options": {
-            "main": "libs/ace-editor/src/test.ts",
-            "tsConfig": "libs/ace-editor/tsconfig.spec.json",
-            "karmaConfig": "libs/ace-editor/karma.conf.js"
+            "tsConfig": "libs/ts-ace-editor/tsconfig.lib.json",
+            "project": "libs/ts-ace-editor/ng-package.json"
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "libs/ace-editor/tsconfig.lib.json",
-              "libs/ace-editor/tsconfig.spec.json"
+              "libs/ts-ace-editor/tsconfig.lib.json",
+              "libs/ts-ace-editor/tsconfig.spec.json"
             ],
             "exclude": ["**/node_modules/**"]
           }
+        },
+        "test": {
+          "builder": "@nrwl/builders:jest",
+          "options": {
+            "jestConfig": "libs/ts-ace-editor/jest.config.js",
+            "tsConfig": "libs/ts-ace-editor/tsconfig.spec.json",
+            "setupFile": "libs/ts-ace-editor/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/schematics:component": {
+          "styleext": "scss"
+        }
+      }
+    },
+    "ace-builds-src": {
+      "root": "libs/ace-builds-src",
+      "sourceRoot": "libs/ace-builds-src/src",
+      "projectType": "library",
+      "prefix": "ace",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "libs/ace-builds-src/tsconfig.lib.json",
+            "project": "libs/ace-builds-src/ng-package.json"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/ace-builds-src/tsconfig.lib.json",
+              "libs/ace-builds-src/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/builders:jest",
+          "options": {
+            "jestConfig": "libs/ace-builds-src/jest.config.js",
+            "tsConfig": "libs/ace-builds-src/tsconfig.spec.json",
+            "setupFile": "libs/ace-builds-src/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/schematics:component": {
+          "styleext": "scss"
         }
       }
     }

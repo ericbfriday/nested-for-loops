@@ -1,30 +1,40 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ViewChild, AfterViewInit } from '@angular/core';
 import { Observable, from } from 'rxjs';
+// import 'brace/theme/github';
+// import 'brace/mode/sql';
+// import ace from 'ace-builds/src-noconflict/ace';
+// declare let ace: ace;
+import * as ace from '@friday-friday/ace-builds-src';
+import { webpack-resolver } from '@friday-friday/ace-builds-src';
+declare let ace: ace;
+
 
 @Component({
   selector: 'friday-friday-editor',
   templateUrl: './editor.component.html',
   styleUrls: ['./editor.component.css']
 })
-export class EditorComponent implements OnInit {
-  public initialValue: string[] = [
-    `console.log(\'test\'test)`,
-    `function aPlaceHolderFunction() {`,
-    `void()`,
-    `}`
-  ];
+export class EditorComponent implements AfterViewInit {
+  public initialValue: string = `console.log(\'test\'test)\nfunction aPlaceHolderFunction() {\nvoid()\n}`;
   public rawCode$: Observable<string>;
   public wrappedHtml$: Observable<string>;
+  @ViewChild('mainEditor') public mainEditor;
   constructor() {
-    this.initialValue = [
-      `console.log(\'test\'test)`,
-      `function aPlaceHolderFunction() {`,
-      `void()`,
-      `}`
-    ];
     this.rawCode$ = from(['']);
     this.wrappedHtml$ = from(['']);
   }
 
-  ngOnInit() {}
+  ngAfterViewInit() {
+    const Range = ace.require('ace/range')['Range'];
+
+    // this.mainEditor
+    //   .getEditor()
+    //   .session.addMarker(new Range(0, 0, 2, 1), 'myMarker', 'fullLine');
+
+    this.mainEditor.getEditor().session.setOption('useWorker', true);
+  }
+
+  onRuleChange(event: Event) {
+    console.log(event);
+  }
 }

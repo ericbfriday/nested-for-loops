@@ -55,6 +55,12 @@
     },
     "custom-elements-cast": {
       "tags": []
+    },
+    "ts-ace-editor": {
+      "tags": []
+    },
+    "ace-builds-src": {
+      "tags": []
     }
   }
 }

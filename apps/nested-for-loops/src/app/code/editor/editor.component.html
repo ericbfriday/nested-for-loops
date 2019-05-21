@@ -1,5 +1,8 @@
-<jsts-editor-ide
-  [initialValue]="initialValue"
-  [rawCode]="rawCode$ | async"
-  [wrappedHtml]="wrappedHtml$ | async"
-></jsts-editor-ide>
+<ace-editor
+  #mainEditor
+  [text]="initialValue"
+  (textChanged)="onRuleChange($event)"
+  [autoUpdateContent]="true"
+  style="min-height: 200px; width:100%; overflow: auto;"
+  mode="javascript"
+></ace-editor>
